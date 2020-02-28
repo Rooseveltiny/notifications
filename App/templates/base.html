@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="/home/saveliy/projects/notifications/App/static/assets/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main_block">
+      <div class="block_element">
+        <div class="name_element">Номер заказа:</div>
+        <div class="value_element">{{ order_number }}</div>
+      </div>
+      <div class="block_element">
+        <div class="name_element">Заказ на имя:</div>
+        <div class="value_element">{{ client_name }}</div>
+      </div>
+      <div class="block_element">
+        <div class="name_element">Прогнозируемая дата отгрузки:</div>
+        <div class="value_element">{{ date_of_getting }}</div>
+      </div>
+
+      <table class="table_style">
+        <tr>
+          <td>
+            <div class="warehouse_head">Цех №</div>
+          </td>
+          <td>
+            <div class="status_cage">Статус готовности</div>
+          </td>
+        </tr>
+
+
+        {% for element in warehousestatus %}
+        <tr>
+          <td>
+            {{ element.warehouse }}
+          </td>
+          {% if element.bool_status %}
+          <td style="background: rgb(79, 168, 91); color: #fff">
+            {{ element.status }}
+          </td>
+          {% else %}
+          <td style="background: rgb(180, 81, 81); color: #fff">
+            {{ element.status }}
+          </td>
+          {% endif %}
+
+        </tr>
+        {% endfor %}
+
+      </table>
+
+      {% if bool_ready %}
+      <div class="main_status main_status--ready">{{ status_of_order }}</div>
+      {% else %}
+      <div class="main_status main_status--not_ready">{{ status_of_order }}</div>
+      {% endif %}
+
+    </div>
+  </div>
+</body>
+
+</html>

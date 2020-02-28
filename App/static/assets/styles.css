@@ -1,0 +1,179 @@
+body {
+    font-family: 'Notable', sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.page{
+    overflow: hidden;
+}
+
+hr{
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+    border: 0;
+    background-color: #e5e5e5;
+}
+
+*, *:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main_block {
+    margin: 100px;
+    padding: 30px;
+    border: 2px dashed #00b5e2;
+}
+
+.block_element{
+    display: flex;
+    background: #00b5e2;
+    padding: 5px 10px 5px 20px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin-bottom: 15px;
+}
+
+.name_element{
+    padding-right: 10px;
+    font-weight: 800;
+}
+
+.table_head{
+    display: flex;
+    justify-content: space-around;
+}
+
+.table_style{
+    width: 100%;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.main_status{
+    display: flex;
+    background: white;
+    padding: 10px 10px 10px 20px;
+    color: #333;
+    font-size: 20px;
+    border-radius: 10px;
+    max-width: fit-content;
+    /* margin-bottom: 20px; */
+    border: 2px dashed #333;
+    font-weight: 800;
+}
+
+td{
+    border: 1px solid grey;
+}
+
+.warehouse_head{
+    background: #00b5e2;
+    color: white;
+    font-weight: bold;
+}
+
+.status_cage{
+    background: #00b5e2;
+    color: white;
+    font-weight: bold;
+}
+
+.main_status--not_ready{
+
+    background: rgb(221, 114, 114);
+    color:white;
+
+}
+
+.main_status--ready{
+
+    background: rgb(79, 168, 91);
+    color:white;
+}
+
+/* MEDIA */
+
+
+/* desktop */
+@media (max-width: 1200px) {
+
+    .container{
+        max-width: 1000px;
+    }
+
+}
+
+/* tablet */
+@media (max-width: 990px) {
+
+    
+   
+}
+
+/* tablet vertical */
+@media (max-width: 770px) {
+
+    .main_block{
+        margin: 30px;
+    }
+
+    .block_element{
+        font-size: 16px;
+    }
+
+    .table_style{
+        font-size: 16px;
+    }
+
+    .main_status{
+        font-size: 17px;
+    }
+
+}
+
+/* mobile phone */
+@media (max-width: 575px) {
+
+    .container{
+        padding: 0px;
+    }
+
+    .main_status{
+        margin: 5px;
+    }
+
+    .main_block{
+        padding: 10px;
+        margin: 5px;
+    }
+    
+
+}
